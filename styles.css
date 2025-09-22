@@ -1,0 +1,112 @@
+*{
+    font-family: "IBM Plex Mono", monospace;
+}
+
+body{
+    background: #05ADF0;
+    background: linear-gradient(90deg, rgba(5, 173, 240, 1) 0%, rgba(171, 226, 247, 0.8) 50%, rgba(5, 173, 240, 1) 100%);
+}
+
+header h2{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: auto 10%;
+}
+
+.calculator{
+    width: 300px;
+    background-color: rgb(10, 102, 175);
+    padding: 30px;
+    border-radius: 8%; 
+}
+
+#display{
+    background-color: rgb(176, 198, 230);
+    padding: 20px;
+    font-size: 18px;
+    color: rgb(12, 135, 234);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.keys button{
+    padding: 25px;
+    border: none;
+    background-color: rgb(12, 135, 234);
+    color: rgb(188, 215, 242);
+    cursor: pointer;
+}
+
+.keys button:nth-child(20){
+    border-bottom-right-radius: 10px;
+}
+
+.keys button:nth-child(17){
+    border-bottom-left-radius: 10px;
+}
+
+.keys button:hover{
+    color: rgb(12, 135, 234);
+    background-color: rgb(188, 215, 242);
+}
+
+.keys button:active{
+    opacity: 0.75;
+}
+
+.about-calculator{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-calculator p{
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+@media(max-width: 700px){
+    main{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 390px) {
+    header h2{
+        font-size: 2em;
+    }
+
+    .calculator{
+        width: 250px;
+        padding: 20px;
+    }
+
+    #display{
+        font-size: 13.5px;
+    }
+
+    .keys button{
+        padding: 20px;
+        font-size: 11px;
+    }
+
+    .about-calculator p{
+        font-size: 1.12em;
+    }
+}
